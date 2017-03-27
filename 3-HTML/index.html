@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit" />
+    <title>MOGO</title>
+    <link rel="icon" sizes="16x16 32x32 64x64 128x128" type="image/png" />
+    <link rel="apple-touch-icon" />
+    <link rel="stylesheet" href="style/global.css" />
+    <link rel="stylesheet" href="style/default.css" />
+    <style type="text/css">
+        .jwclick, .jwlogo { display: none !important; }
+        .video { width: 100%; height: 100%; overflow: hidden; position: absolute; left: 0px; top: 0px; opacity: 0; }
+        .video .hiddenplay { position: absolute; width: 100%; height: 100%; background: #000; z-index: 88; top: 0px; left: 0px; opacity: 0.2; cursor: pointer; display: none; }
+        .video #videocontainer { width: 100%; height: 115%; background: #000; position: relative; top: -55px; }
+    </style>
+</head>
+<body>
+    <div id="home-logo">
+        <a href="javascript:;">
+            <img src="images/logo-small.png" alt=""></a>
+    </div>
+    <a href="javascript:;" class="menu-switcher"><span></span></a>
+    <a href="javascript:;" class="btn-user"></a>
+    <div id="home-container">
+        <div class="home-sec1" data-color="c1518f">
+            <div class="middle">
+                <div class="cont">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="">
+                    </div>
+                    <div class="text">
+                        <p>Let you and the fun</p>
+                        <p>eye to eye.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-tips">
+                <p>Scrolling</p>
+                <p>mouse</p>
+                <p>
+                    <img src="images/icon-scroll-tips.png" alt="特效">
+                </p>
+            </div>
+        </div>
+        <div class="home-sec2" data-color="ffb401">
+            <div class="mouse"></div>
+            <div class="bg"></div>
+            <div class="video">
+                <div id="videocontainer"></div>
+                <div class="hiddenplay"></div>
+            </div>
+            <div class="middle" id="playbtn">
+                <div class="btn">
+                    <img src="images/btn-play.png" alt="">
+                </div>
+                <div class="text">Play Video</div>
+            </div>
+            <div class="scroll-tips">
+                <p>Scrolling</p>
+                <p>mouse</p>
+                <p>
+                    <img src="images/icon-scroll-tips.png" alt="">
+                </p>
+            </div>
+        </div>
+        <div class="home-sec3" data-color="37cb80">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-slide1">
+                    <div class="mouse"></div>
+                    <div class="wrapper">
+                        <div class="main middle">
+                            <header>
+                                <div class="eng">
+                                    <p>Scientific nature</p>
+                                    <p>accuracy</p>
+                                </div>
+                                <div class="chi">问卷的科学性和精准性</div>
+                            </header>
+                            <div class="content">
+                                <div class="items">
+                                    <div class="item item1">
+                                        <div class="item-bd">
+                                            <div class="index">01</div>
+                                            <div class="text">
+                                                <div class="middle">
+                                                    <p>1700道并不断扩充的</p>
+                                                    <p>“魔菇性爱题库”</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress" style="width: 65%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item item2">
+                                        <div class="item-bd">
+                                            <div class="index">02</div>
+                                            <div class="text">
+                                                <div class="middle">
+                                                    <p>600余种子用户参与测试体验</p>
+                                                    <p>保证测试结果的准确性</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item item3">
+                                        <div class="item-bd">
+                                            <div class="index">03</div>
+                                            <div class="text">
+                                                <div class="middle">
+                                                    <p>独创五维参数分析法</p>
+                                                    <p>分析用户性爱趋向</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item item4">
+                                        <div class="item-bd">
+                                            <div class="index">04</div>
+                                            <div class="text">
+                                                <div class="middle">
+                                                    <p>通过全新的数学模型</p>
+                                                    <p>分析用户性爱水平</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress" style="width: 40%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="anis middle">
+                                    <div class="anis-bd">
+                                        <div class="layer layer1"></div>
+                                        <div class="layer layer2 middle" id="svg"></div>
+                                        <div class="layer layer3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-slide2">
+                    <div class="wrapper">
+                        <div class="main middle">
+                            <header>
+                                <div class="eng">
+                                    <p>Single product</p>
+                                    <p>combination logic</p>
+                                </div>
+                                <div class="chi">单品组合逻辑</div>
+                            </header>
+                            <div class="content">
+                                <div class="items">
+                                    <div class="item item1">
+                                        <div class="item-bd">
+                                            <div class="index">01</div>
+                                            <div class="text">
+                                                <div class="middle">
+                                                    <p>在两性关系中</p>
+                                                    <p>每个人都会有不同的需求和趣味</p>
+                                                    <p>所需要的情趣用品也千差万别</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress" style="width: 65%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item item2">
+                                        <div class="item-bd">
+                                            <div class="index">02</div>
+                                            <div class="text">
+                                                <div class="middle">
+                                                    <p>缺乏科学的指导、正确的使用方法</p>
+                                                    <p>和对自身的准确定位，使得大多数人都无法</p>
+                                                    <p>正确理解并满足自己的需求</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress" style="width: 45%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item item3">
+                                        <div class="item-bd">
+                                            <div class="index">03</div>
+                                            <div class="text">
+                                                <div class="middle">
+                                                    <p>“魔菇科技”</p>
+                                                    <p>会根据系统的用户问答提取用户</p>
+                                                    <p>需求参数进行专家分析</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item item4">
+                                        <div class="item-bd">
+                                            <div class="index">04</div>
+                                            <div class="text">
+                                                <div class="middle">
+                                                    <p>根据我们的体验、经验和知识积累</p>
+                                                    <p>为用户搭配最优单品，组合及玩法指南</p>
+                                                    <p>从而带给用户颠覆性的性爱体验</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress" style="width: 70%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="anis middle">
+                                    <div class="anis-bd">
+                                        <div class="layer layer1"></div>
+                                        <div class="layer layer2"></div>
+                                        <div class="layer layer3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-slide3">
+                    <div class="wrapper">
+                        <div class="main middle">
+                            <header>
+                                <div class="eng">
+                                    <p>Single product</p>
+                                    <p>combination logic</p>
+                                </div>
+                                <div class="chi">单品组合逻辑</div>
+                            </header>
+                            <div class="content">
+                                <div class="items">
+                                    <div class="item item1">
+                                        <div class="item-bd">
+                                            <div class="index">01</div>
+                                            <div class="text">
+                                                <div class="middle">
+                                                    <p>好的料理不一定要全部选用最名贵的食材</p>
+                                                    <p>但好的配方却值千金</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress" style="width: 55%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item item2">
+                                        <div class="item-bd">
+                                            <div class="index">02</div>
+                                            <div class="text">
+                                                <div class="middle">
+                                                    <p>我们提供的不仅仅是一份单品组合套装</p>
+                                                    <p>而是针对不同产品组合的玩法建议</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item item3">
+                                        <div class="item-bd">
+                                            <div class="index">03</div>
+                                            <div class="text">
+                                                <div class="middle">
+                                                    <p>用有限但有序的单品，激发无限创意</p>
+                                                    <p>让新鲜感和刺激感持续升级</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress" style="width: 56%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item item4">
+                                        <div class="item-bd">
+                                            <div class="index">04</div>
+                                            <div class="text">
+                                                <div class="middle">
+                                                    <p>充分满足你和TA的两性需要，提升精神</p>
+                                                    <p>层面的情感，巩固双方感情</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress" style="width: 40%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="anis middle">
+                                    <div class="anis-bd">
+                                        <div class="layer layer1"></div>
+                                        <div class="layer layer2"></div>
+                                        <div class="layer layer3"></div>
+                                        <div class="middle">
+                                            <div class="cubz">
+                                                <div class="face"></div>
+                                                <div class="face"></div>
+                                                <div class="face"></div>
+                                                <div class="face"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-slide4">
+                    <div class="wrapper">
+                        <div class="main middle">
+                            <header>
+                                <div class="eng">
+                                    <p>Health safety</p>
+                                    <p>Easy</p>
+                                </div>
+                                <div class="chi">包装的卫生性、安全性和易用性</div>
+                            </header>
+                            <div class="content">
+                                <div class="items">
+                                    <div class="item item1">
+                                        <div class="item-bd">
+                                            <div class="index">01</div>
+                                            <div class="text">
+                                                <div class="middle">
+                                                    <p>专业的清理消毒流水线</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress" style="width: 80%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item item2">
+                                        <div class="item-bd">
+                                            <div class="index">02</div>
+                                            <div class="text">
+                                                <div class="middle">
+                                                    <p>对单品和包装的无菌香薰处理</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress" style="width: 50%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item item3">
+                                        <div class="item-bd">
+                                            <div class="index">03</div>
+                                            <div class="text">
+                                                <div class="middle">
+                                                    <p>单品均通过“可食用”认证</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress" style="width: 40%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="item item4">
+                                        <div class="item-bd">
+                                            <div class="index">04</div>
+                                            <div class="text">
+                                                <div class="middle">
+                                                    <p>此外“魔菇”会提供详细的产品</p>
+                                                    <p>清理保养指南和清理、消毒套装</p>
+                                                </div>
+                                            </div>
+                                            <div class="progress" style="width: 65%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="anis middle">
+                                    <div class="anis-bd">
+                                        <div class="layer circle-big"></div>
+                                        <div class="layer circle-small1">
+                                            <div></div>
+                                        </div>
+                                        <div class="layer circle-small2">
+                                            <div></div>
+                                        </div>
+                                        <div class="icon icon1 middle">
+                                            <img src="images/icon-water.png" alt="">
+                                        </div>
+                                        <div class="icon icon2 middle">
+                                            <img src="images/icon-defend.png" alt="">
+                                        </div>
+                                        <div class="icon icon3 middle">
+                                            <img src="images/icon-safe.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <a href="javascript:;" class="prev"></a>
+                <div></div>
+                <a href="javascript:;" class="next"></a>
+            </div>
+            <div class="scroll-tips">
+                <p>Scrolling</p>
+                <p>mouse</p>
+                <p>
+                    <img src="images/icon-scroll-tips.png" alt="">
+                </p>
+            </div>
+        </div>
+        <div class="home-sec4" data-color="31005d">
+            <div class="middle">
+                <a href="javascript:;" class="own">
+                    <span class="middle">
+                        <img src="images/icon-own.png" alt=""></span>
+                    <span class="circle"></span>
+                </a>
+                <a href="javascript:;" class="friend">
+                    <span class="middle">
+                        <img src="images/icon-friend.png" alt=""></span>
+                    <span class="circle"></span>
+                </a>
+                <div class="cubz">
+                    <div class="cubz-inner">
+                        <div class="face face1">
+                            <img src="images/icon-q.png" alt="" class="middle">
+                        </div>
+                        <div class="face face2">
+                            <img src="images/icon-q.png" alt="" class="middle">
+                        </div>
+                        <div class="face face3">
+                            <img src="images/icon-q.png" alt="" class="middle">
+                        </div>
+                        <div class="face face4">
+                            <img src="images/icon-q.png" alt="" class="middle">
+                        </div>
+                        <div class="face face5"></div>
+                        <div class="face face6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="menu">
+        <header class="ani">MOGO</header>
+        <nav class="db-a db-span">
+            <li class="ani">
+                <a href="javascript:;">
+                    <span>Company</span>
+                    <span>关于我们</span>
+                </a>
+            </li>
+            <li class="ani">
+                <a href="javascript:;">
+                    <span>Products</span>
+                    <span>产品中心</span>
+                </a>
+            </li>
+            <li class="ani">
+                <a href="javascript:;">
+                    <span>Informations</span>
+                    <span>信息中心</span>
+                </a>
+            </li>
+            <li class="ani">
+                <a href="javascript:;">
+                    <span>Jion</span>
+                    <span>加入我们</span>
+                </a>
+            </li>
+        </nav>
+        <div class="qr ani">
+            <div class="item">
+                <p>
+                    <img src="upload/qr.png" alt="">
+                </p>
+                <p>[WeChat]</p>
+            </div>
+            <div class="item">
+                <p>
+                    <img src="upload/qr.png" alt="">
+                </p>
+                <p>[Weibo]</p>
+            </div>
+        </div>
+        <div class="share ani">
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
+    </div>
+    <footer>
+        <div class="top">
+            <a href="javascript:;">Talk show</a><a href="javascript:;">Community</a><a href="javascript:;">About the company</a><a href="javascript:;">Customer service</a>
+        </div>
+        <div class="main">
+            <div class="share">
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+            </div>
+            <div class="qr ani">
+                <div class="item">
+                    <p>
+                        <img src="upload/qr.png" alt="">
+                    </p>
+                    <p>[WeChat]</p>
+                </div>
+                <div class="item">
+                    <p>
+                        <img src="upload/qr.png" alt="">
+                    </p>
+                    <p>[Weibo]</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="copy">
+                <p>&copy; 2015 MOGO All Rights Reserved / Terms of use / Privacy Policy  by:cuckoo</p>
+            </div>
+            <div class="addr">
+                <p>Beijing, Beijing, Chaoyang District,</p>
+                <p>Wangjing SOHO Tower 3, B block 2301,China</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/mousewheel.js"></script>
+    <script src="js/raphael.min.js"></script>
+    <script src="js/index.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/sec1.js"></script>
+    <script src="js/sketch.js"></script>
+    <script src="js/sec2.js"></script>
+    <script src="js/video/player.mini.js"></script>
+    <script>
+        var TonyVideo = {
+            load: function (objs) {
+                var objplay = jwplayer(objs.vcontainer).setup({
+                    flashplayer: 'js/video/flashplay.swf',
+                    html5player: 'js/video/html5player.js',
+                    file: objs.vfiles,
+                    image: objs.vfimg,
+                    width: '100%',
+                    height: '100%',
+                    aspectratio: '16:9',
+                    stretching: 'fill',
+                    controls: 'false'
+                });
+                return objplay;
+            }
+        };
+        var isloadvideo = false;
+        var vobj = null;
+        $('#playbtn').click(function () {
+            $(".video").animate({ opacity: 1 });
+            if (!isloadvideo) {
+                isloadvideo = true;
+                vobj = TonyVideo.load({
+                    vcontainer: 'videocontainer',
+                    vfiles: 'testvideo/testvideo.mp4',
+                    vfimg: 'images/bg-home-sec2.jpg'
+                });
+                vobj.onComplete(function () {
+                    $(".video").animate({ opacity: 0 });
+                    $('.hiddenplay').fadeOut('fast');
+                    $('#playbtn').fadeIn();
+                });
+            };
+            $(this).fadeOut('fast');
+            vobj.play();
+            $('.hiddenplay').show();
+        });
+        $('.hiddenplay').click(function () {
+            $(this).fadeOut('fast');
+            if (vobj.getState() == "PLAYING") {
+                vobj.pause();
+            }
+            else {
+                vobj.play();
+            }
+            $('#playbtn').fadeIn();
+        });
+    </script>
+</body>
+</html>
